@@ -1,34 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz App | Jimike</title>
-    <meta name="description" content="Simple Quiz App. Features multiple choice questions, timer and automatic grading.">
+    <meta name="description"
+        content="Simple Quiz App. Features multiple choice questions, timer and automatic grading.">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-<div class="start-quiz">
-    <button id="start-quiz-btn">Start Quiz</button>
-</div>
-<div class="rules-quiz">
-    <h3>Rules of the Quiz</h3>
-    <hr>
-    <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-        <li>5</li>
-    </ul>
-    <button id="go-back">Go back</button>
+    <div class="start-quiz">
+        <button id="start-quiz-btn">Start Quiz</button>
+    </div>
+    <div class="rules-quiz">
+        <h3>Rules of the Quiz</h3>
+        <hr>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+        <button id="go-back">Go back</button>
+        <button id="continue">Continue</button>
+    </div>
+    <div class="main-quiz">
+        <h3 id="question"></h3>
+        <label><input type="radio" name="option" value="opt1">
+            <p id="option-one">
+        </label>
+        <label><input type="radio" name="option" value="opt2">
+            <p id="option-two">
+        </label>
+        <label><input type="radio" name="option" value="opt3">
+            <p id="option-three">
+        </label>
+        <label><input type="radio" name="option" value="opt4">
+            <p id="option-four">
+        </label>
+<hr>
+<div class="footer-quiz">
     <button id="continue">Continue</button>
 </div>
-<div class="main-quiz">
-    <h3 id="question"></h3>
-    <label><input type="radio" name="q1" value="ans-q1">Q1</label>
-</div>
+    </div>
     <script type="text/javascript" src="script.js"></script>
 </body>
+
 </html>
