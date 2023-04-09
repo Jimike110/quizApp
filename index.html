@@ -19,32 +19,33 @@
         <h3>Rules of the Quiz</h3>
         <hr>
         <ul>
-            <li>The quiz consists a question with multiple-choice options.</li>
+            <li>The quiz consists questions with multiple-choice options.</li>
             <li>You have a total of 15 seconds per question.</li>
             <li>You may pick and answer or change your answer within the 15-second duration.</li>
             <li>Once the 15 seconds elapses, it moves to the next question.</li>
             <li>On quiz completion, you are automatically graded.</li>
         </ul>
-        <button id="rules-go-back">Go back</button>
-        <button id="rules-continue">Continue</button>
+        <div class="both-rules-btns">
+            <button id="rules-go-back">Go back</button>
+            <button id="rules-continue">Continue</button>    
+        </div>
     </div>
     <div class="main-quiz">
-        <h3 id="question"></h3>
-        <label><input type="radio" name="option" value="opt1">
-            <p id="option-one">
-        </label>
-        <label><input type="radio" name="option" value="opt2">
-            <p id="option-two">
-        </label>
-        <label><input type="radio" name="option" value="opt3">
-            <p id="option-three">
-        </label>
-        <label><input type="radio" name="option" value="opt4">
-            <p id="option-four">
-        </label>
-<hr>
+        <div class="header">
+            <div class="number-of-count">
+                <span class="number-of-question">1 of 3 questions.</span>
+            </div>
+            <div class="timer-div">
+                <img src="https://uxwing.com/wp-content/themes/uxwing/download/time-and-date/stopwatch-icon.png" width="20px" />
+                <span class="time-left">10s</span>
+            </div>
+        </div>
+        <div id="container">
+            <!-- questions and their options go here -->
+        </div>
 <div class="footer-quiz">
-    <button id="continue">Continue</button>
+    <button id="quit-quiz">Quit</button>
+    <button id="next-button">Next</button>
 </div>
     </div>
     <script type="text/javascript" src="script.js"></script>

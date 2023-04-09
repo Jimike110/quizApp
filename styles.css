@@ -27,9 +27,12 @@ button:hover {
     left: 40%;
 }
 .rules-quiz {
+    margin: 30px;
+    border-radius: 30px;
+    box-shadow: 5px 0 20px 0 black;
     background-color: crimson;
     color: white;
-    width: 100%;
+    width: 80%;
     max-width: 500px;
     z-index: 1;
 }
@@ -44,10 +47,12 @@ button:hover {
 }
 .rules-quiz ul {
     list-style: decimal;
-    padding: 7px 30px;
+text-indent: 0px;
+padding-right: 15px;
 }
-.rules-quiz button {
-    justify-content: space-between;
+.both-rules-btns {
+    text-align: center;
+    padding: 10px 0;
 }
 .rules-quiz #rules-go-back {
     background-color: orange;
