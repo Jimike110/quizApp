@@ -13,20 +13,20 @@
 
 <body>
     <div class="start-quiz">
-        <button id="start-quiz-btn">Start Quiz</button>
+        <button onclick="start()" id="start-quiz-btn">Start Quiz</button>
     </div>
     <div class="rules-quiz">
         <h3>Rules of the Quiz</h3>
         <hr>
         <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
+            <li>The quiz consists a question with multiple-choice options.</li>
+            <li>You have a total of 15 seconds per question.</li>
+            <li>You may pick and answer or change your answer within the 15-second duration.</li>
+            <li>Once the 15 seconds elapses, it moves to the next question.</li>
+            <li>On quiz completion, you are automatically graded.</li>
         </ul>
-        <button id="go-back">Go back</button>
-        <button id="continue">Continue</button>
+        <button id="rules-go-back">Go back</button>
+        <button id="rules-continue">Continue</button>
     </div>
     <div class="main-quiz">
         <h3 id="question"></h3>
