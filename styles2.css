@@ -4,6 +4,11 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+.question, .rules-quiz h3, #user-score, button:not([class = "option-div"]) {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+}
 body {
   height: 100vh;
   background: linear-gradient(184deg,#8754ff,#8E2DE2);
@@ -33,6 +38,49 @@ button {
 }
 #restart {
   margin-top: 0.9em;
+}
+.rules-quiz {
+  background-color: #ffffff;
+  padding: 3.1em 1.8em;
+  width: 80%;
+  max-width: 37.5em;
+  margin: 0 auto;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 0.6em;
+  border: 2px solid rgb(153, 0, 255);
+}
+.rules-quiz h3 {
+  text-align: center;
+  padding-bottom: 0.6em;
+}
+.rules-quiz hr {
+  margin-bottom: 1.8em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.1em solid #c0bfd2;
+}
+.rules-quiz ul li{
+  margin: 0.6em;
+}
+.rules-quiz button {
+  font-size: 1em;
+  margin-top: 1.5em;
+  color: #ffffff;
+  padding: 0.7em 1.8em;
+  border-radius: 0.3em;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.3);
+}
+.rules-quiz #rules-go-back {
+  background-color: darkorange;
+  float: left;
+}
+.rules-quiz #rules-continue {
+  float: right;
+  background-color: darkgreen;
 }
 #display-container {
   background-color: #ffffff;

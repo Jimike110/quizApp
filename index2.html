@@ -12,7 +12,22 @@
 <div class="start-screen">
     <button id="start-button">Start</button>
 </div>
-<div id="display-container">
+<div style="display: none;" class="rules-quiz">
+    <h3>Rules of the Quiz</h3>
+    <hr>
+    <ul>
+        <li>The quiz consists questions with multiple-choice options.</li>
+        <li>You have a total of 15 seconds per question.</li>
+        <li>You may pick and answer or change your answer within the 15-second duration.</li>
+        <li>Once the 15 seconds elapses, it moves to the next question.</li>
+        <li>On quiz completion, you are automatically graded.</li>
+    </ul>
+    <div class="both-rules-btns">
+        <button id="rules-go-back">Go back</button>
+        <button id="rules-continue">Continue</button>    
+    </div>
+</div>
+<div style="display: none;" id="display-container">
     <div class="header">
         <div class="number-of-count">
             <span class="number-of-question">1 of 3 questions</span>

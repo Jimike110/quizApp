@@ -8,6 +8,9 @@ let scoreContainer = document.querySelector(".score-container");
 let restart = document.getElementById("restart");
 let userScore = document.getElementById("user-score");
 let startScreen = document.querySelector(".start-screen");
+let rulesQuiz = document.querySelector(".rules-quiz");
+let rulesContinue = document.getElementById("rules-continue");
+rulesGoBack = document.getElementById("rules-go-back");
 let startButton = document.getElementById("start-button");
 let questionCount;
 let scoreCount = 0;
@@ -81,7 +84,7 @@ const quizArray = [
 //Restart Quiz
 restart.addEventListener("click", () => {
     initial();
-    displayContainer.classList.remove("hide");
+    displayContainer.style.display = "block";
     scoreContainer.classList.add("hide");
 });
 
@@ -94,7 +97,7 @@ nextBtn.addEventListener(
         //if last question
         if (questionCount == quizArray.length) {
             //hide question container and display score
-            displayContainer.classList.add("hide");
+            displayContainer.style.display = "none";
             scoreContainer.classList.remove("hide");
             //user score
             userScore.innerHTML =
@@ -207,8 +210,19 @@ function initial() {
 
 //when user click on start button
 startButton.addEventListener("click", () => {
+    rulesQuiz.style.display = "block";
     startScreen.classList.add("hide");
-    displayContainer.classList.remove("hide");
+});
+
+//when user clicks on rules' go back button
+rulesGoBack.addEventListener("click", () => {
+    rulesQuiz.style.display = "none";
+    startScreen.classList.remove("hide");
+});
+//when user click on rules' continue button
+rulesContinue.addEventListener("click", () => {
+    rulesQuiz.style.display = "none";
+    displayContainer.style.display = "block";
     initial();
 });
 
