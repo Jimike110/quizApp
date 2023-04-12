@@ -12,7 +12,12 @@
     <!-- Title and styles -->
     <title>Smart Quiz App | Jimike</title>
     <link rel="stylesheet" href="styles.css" />
-
+    
+    <!-- Font Awesome 5.15.1 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -49,6 +54,57 @@
   <body>
     <!-- Start screen -->
     <div class="start-screen">
+      <h3 id="start-intro">Smart Quiz App by Jimike. Connect:</h3>
+      <div class="wrapper">
+        <a
+          href="https://facebook.com/michael.oladoye.129"
+          target="_blank"
+          class="icon facebook"
+        >
+          <div class="tooltip">Facebook</div>
+          <span><i class="fab fa-facebook-f"></i></span>
+        </a>
+        <a
+          href="https://twitter.com/jimikeCodes"
+          target="_blank"
+          class="icon twitter"
+        >
+          <div class="tooltip">Twitter</div>
+          <span><i class="fab fa-twitter"></i></span>
+        </a>
+        <a
+          href="https://wa.me/+2348135768915"
+          target="_blank"
+          class="icon whatsapp"
+        >
+          <div class="tooltip">WhatsApp</div>
+          <span><i class="fab fa-whatsapp"></i></span>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/michael-oladoye-91ba88225"
+          target="_blank"
+          class="icon linkedin"
+        >
+          <div class="tooltip">LinkedIn</div>
+          <span><i class="fab fa-linkedin"></i></span>
+        </a>
+        <a
+          href="https://github.com/Jimike110"
+          target="_blank"
+          class="icon github"
+        >
+          <div class="tooltip">Github</div>
+          <span><i class="fab fa-github"></i></span>
+        </a>
+        <a
+          href="https://www.youtube.com/@therealjimike"
+          target="_blank"
+          class="icon youtube"
+        >
+          <div class="tooltip">Youtube</div>
+          <span><i class="fab fa-youtube"></i></span>
+        </a>
+      </div>
       <button id="start-button">Start</button>
     </div>
 
@@ -62,17 +118,17 @@
           limit of 10 seconds for each question.
         </li>
         <li>
-          You will receive one point for each correct answer. You will see
-          your score at the end of the quiz.
+          You will receive one point for each correct answer. You will see your
+          score at the end of the quiz.
         </li>
         <li>
           If you want to retake the quiz, click on the restart button at the end
           of the quiz.
         </li>
         <li>
-          Each question has a time limit of 10 seconds. If you do not
-          answer the question within the time limit, the quiz will move to the
-          next question automatically.
+          Each question has a time limit of 10 seconds. If you do not answer the
+          question within the time limit, the quiz will move to the next
+          question automatically.
         </li>
         <li>
           Once you have answered the current question, you can click on the
@@ -84,8 +140,8 @@
           randomized.
         </li>
         <li>
-          After you select an option for a question, the app will check if
-          the option is correct or not. If the option is correct, the app will
+          After you select an option for a question, the app will check if the
+          option is correct or not. If the option is correct, the app will
           display a green highlight around the option. If the option is
           incorrect, the app will display a red highlight around the option, and
           also show the correct answer.
