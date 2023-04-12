@@ -1,56 +1,129 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <!-- Meta information -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Quiz App by Jimike - Dynamic, Responsive, Aesthetic and Functional."
+    />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Title and styles -->
     <title>Smart Quiz App | Jimike</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <link rel="stylesheet" href="styles.css" />
 
-<body>
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Google Analytics Tag -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-VLL46ZEXJG"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-VLL46ZEXJG");
+    </script>
+
+    <!-- Google Adsense -->
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8984839698580812"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./Jimike.png" type="image/x-icon" />
+  </head>
+
+  <body>
+    <!-- Start screen -->
     <div class="start-screen">
-        <button id="start-button">Start</button>
+      <button id="start-button">Start</button>
     </div>
-    <div style="display: none;" class="rules-quiz">
-        <h3>Rules of the Quiz</h3>
-        <hr>
-        <ul>
-            <li>The quiz contains a series of multiple-choice questions, with a time limit of 10 seconds for each question.</li>
-            <li>Users will receive one point for each correct answer. Users can see their score at the end of the quiz.</li>
-            <li>If you want to retake the quiz, click on the restart button at the end of the quiz.</li>
-            <li>Each question has a time limit of 10 seconds. If a user does not answer the question within the time limit, the quiz will move to the next question automatically.</li>
-            <li>Once the user has answered the current question, they can click on the 'NEXT' button to move on to the next question.</li>
-            <li>The quiz questions are generated randomly from a pool of questions. The order of the questions and the options for each question are randomized.</li>
-            <li>After the user selects an option for a question, the app will check if the option is correct or not. If the option is correct, the app will display a green highlight around the option. If the option is incorrect, the app will display a red highlight around the option, and also show the correct answer.</li>
-            <li>You may click 'START QUIZ' to begin.</li>
-        </ul>
-        <div class="both-rules-btns">
-            <button id="rules-go-back">Go back</button>
-            <button id="rules-continue">Start Quiz</button>
-        </div>
-    </div>
-    <div style="display: none;" id="display-container">
-        <div class="header">
-            <div class="number-of-count">
-                <span class="number-of-question">1 of 3 questions</span>
-            </div>
-            <div class="timer-div">
-                <img src="https://uxwing.com/wp-content/themes/uxwing/download/time-and-date/stopwatch-icon.png"
-                    width="20px" />
-                <span class="time-left">10s</span>
-            </div>
-        </div>
-        <div id="container">
-            <!-- questions and options will be displayed here -->
-        </div>
-        <button id="next-button">Next</button>
-    </div>
-    <div class="score-container hide">
-        <div id="user-score">Demo Score</div>
-        <button id="restart">Restart</button>
-    </div>
-    <script src="script.js" type="text/javascript"></script>
-</body>
 
+    <!-- Quiz rules -->
+    <div style="display: none" class="rules-quiz">
+      <h3>Rules of the Quiz</h3>
+      <hr />
+      <ul>
+        <li>
+          The quiz contains a series of multiple-choice questions, with a time
+          limit of 10 seconds for each question.
+        </li>
+        <li>
+          Users will receive one point for each correct answer. Users can see
+          their score at the end of the quiz.
+        </li>
+        <li>
+          If you want to retake the quiz, click on the restart button at the end
+          of the quiz.
+        </li>
+        <li>
+          Each question has a time limit of 10 seconds. If a user does not
+          answer the question within the time limit, the quiz will move to the
+          next question automatically.
+        </li>
+        <li>
+          Once the user has answered the current question, they can click on the
+          'NEXT' button to move on to the next question.
+        </li>
+        <li>
+          The quiz questions are generated randomly from a pool of questions.
+          The order of the questions and the options for each question are
+          randomized.
+        </li>
+        <li>
+          After the user selects an option for a question, the app will check if
+          the option is correct or not. If the option is correct, the app will
+          display a green highlight around the option. If the option is
+          incorrect, the app will display a red highlight around the option, and
+          also show the correct answer.
+        </li>
+        <li>You may click 'START QUIZ' to begin.</li>
+      </ul>
+      <div class="both-rules-btns">
+        <button id="rules-go-back">Go back</button>
+        <button id="rules-continue">Start Quiz</button>
+      </div>
+    </div>
+
+    <!-- Quiz display container -->
+    <div style="display: none" id="display-container">
+      <div class="header">
+        <div class="number-of-count">
+          <span class="number-of-question"></span>
+        </div>
+        <div class="timer-div">
+          <img
+            src="https://uxwing.com/wp-content/themes/uxwing/download/time-and-date/stopwatch-icon.png"
+            width="20px"
+          />
+          <span class="time-left">10s</span>
+        </div>
+      </div>
+      <div id="container">
+        <!-- questions and options will be displayed here -->
+      </div>
+      <button id="next-button">Next</button>
+    </div>
+
+    <!-- Score display container -->
+    <div class="score-container hide">
+      <div id="user-score"></div>
+      <button id="restart">Restart</button>
+    </div>
+
+    <script src="script.js" type="text/javascript"></script>
+  </body>
 </html>
