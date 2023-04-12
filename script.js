@@ -19,7 +19,7 @@ let countdown;
 let quizArray = [];
 
 //Questions and Options array
-fetch('https://the-trivia-api.com/api/questions?limit=10&categories=science,history')
+fetch('https://the-trivia-api.com/api/questions?categories=general_knowledge,geography,science,society_and_culture,history,sport_and_leisure&limit=15&region=NG&difficulty=medium&tags=2022,africa,capital_cities,chemistry,cities,computing,countries,general_knowledge,geography,mathematics,physics,people,places,presidents,quotes,religion,science,scientific_discoveries,software_engineering,soccer,technology,the_internet,the_solar_system,world_cup,words')
     .then(response => response.json())
     .then(data => {
         for (let i = 0; i < data.length; i++) {
