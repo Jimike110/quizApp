@@ -15,7 +15,7 @@ Check out the live demo of the app at: [https://jimike-quizapp.netlify.app/](htt
 - HTML
 - CSS
 - JavaScript
-- API
+- REST API
 
 ## Usage
 1. Navigate to the app URL: [https://jimike-quizapp.netlify.app/](https://jimike110.ml/quizApp)

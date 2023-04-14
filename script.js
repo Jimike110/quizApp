@@ -12,34 +12,55 @@ let rulesQuiz = document.querySelector(".rules-quiz");
 let rulesContinue = document.getElementById("rules-continue");
 let rulesGoBack = document.getElementById("rules-go-back");
 let startButton = document.getElementById("start-button");
+let categoryDiv = document.querySelector(".category");
+let configBack = document.getElementById("config-back");
+let configNext = document.getElementById("config-next");
 let questionCount;
 let scoreCount = 0;
 let count = 11;
 let countdown;
 let quizArray = [];
 
-//Questions and Options array
-fetch(
-  "https://the-trivia-api.com/api/questions?categories=general_knowledge,geography,science,society_and_culture,history,sport_and_leisure&limit=15&region=NG&difficulty=medium&tags=2022,africa,capital_cities,chemistry,cities,computing,countries,general_knowledge,geography,mathematics,physics,people,places,presidents,quotes,religion,science,scientific_discoveries,software_engineering,soccer,technology,the_internet,the_solar_system,world_cup,words"
-)
-  .then((response) => response.json())
-  .then((data) => {
-    for (let i = 0; i < data.length; i++) {
-      const quizObject = {
-        id: data[i].id,
-        question: data[i].question,
-        correct: data[i].correctAnswer,
-        options: [...data[i].incorrectAnswers, data[i].correctAnswer],
-      };
-      quizArray.push(quizObject);
+let select = [
+  //Add event listener to the category dropdown
+  document.getElementById("category-select"),
+  document.getElementById("difficulty-select"),
+  document.getElementById("question-limit-input"),
+];
+
+select.forEach((element) => {
+  element.addEventListener("change", (event) => {
+    let categoryValue = select[0].value;
+    let difficultyValue = select[1].value;
+    let limitValue = select[2].value;
+    let url;
+    if (categoryValue === "all") {
+      url = `https://the-trivia-api.com/api/questions?&limit=${limitValue}&region=NG&difficulty=${difficultyValue}`;
+    } else {
+      url = `https://the-trivia-api.com/api/questions?categories=${categoryValue}&limit=${limitValue}&region=NG&difficulty=${difficultyValue}`;
     }
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => {
+        for (let i = 0; i < data.length; i++) {
+          const quizObject = {
+            id: data[i].id,
+            question: data[i].question,
+            correct: data[i].correctAnswer,
+            options: [...data[i].incorrectAnswers, data[i].correctAnswer],
+          };
+          quizArray.push(quizObject);
+        }
+      });
   });
+});
 
 //Restart Quiz
 restart.addEventListener("click", () => {
   location.reload();
 });
 
+//Next Button
 //Next Button
 nextBtn.addEventListener(
   "click",
@@ -54,7 +75,14 @@ nextBtn.addEventListener(
       scoreContainer.classList.remove("hide");
       //user score
       userScore.innerHTML =
-        "Your score: " + scoreCount + ".<br> Total score: " + questionCount + ".";
+        "Your score: " +
+        scoreCount +
+        "<br> Total score: " +
+        questionCount +
+        " <br> Category: " +
+        document.getElementById("category-select").value +
+        "<br> Difficulty: " +
+        document.getElementById("difficulty-select").value;
     } else {
       //display questionCount
       startScreen.classList.add("hide");
@@ -173,9 +201,21 @@ rulesGoBack.addEventListener("click", () => {
   rulesQuiz.style.display = "none";
   startScreen.classList.remove("hide");
 });
-//when user click on rules' continue button
+//when user clicks on rules' next button
 rulesContinue.addEventListener("click", () => {
   rulesQuiz.style.display = "none";
+  categoryDiv.style.display = "block";
+});
+
+//when user clicks on config page go back button
+configBack.addEventListener("click", () => {
+  categoryDiv.style.display = "none";
+  rulesQuiz.style.display = "block";
+});
+
+//when user clicks on config page start button
+configNext.addEventListener("click", () => {
+  categoryDiv.style.display = "none";
   displayContainer.style.display = "block";
   initial();
 });

@@ -61,7 +61,7 @@
   <body>
     <!-- Start screen -->
     <div class="start-screen">
-      <h3 id="start-intro">Smart Quiz App by Jimike. Connect:</h3>
+      <h3 id="start-intro">Smart Quiz App by Jimike <br />Connect:</h3>
       <div class="wrapper">
         <a
           href="https://facebook.com/michael.oladoye.129"
@@ -112,7 +112,58 @@
           <span><i class="fab fa-youtube"></i></span>
         </a>
       </div>
-      <button id="start-button">Start</button>
+      <button id="start-button">PLAY</button>
+    </div>
+
+    <!-- Quiz Configuration -->
+    <div style="display: none" class="category">
+      <h3>Your Quiz, Your Way</h3>
+      <hr />
+      <section>
+        <label for="category-select">Choose a category:</label>
+        <select required id="category-select">
+          <option value="">Select...</option>
+          <option value="all">All</option>
+          <option value="arts_and_literature">Arts and Literature</option>
+          <option value="film_and_tv">Film and TV</option>
+          <option value="food_and_drink">Food and Drink</option>
+          <option value="geography">Geography</option>
+          <option value="history">History</option>
+          <option value="sport_and_leisure">Leisure</option>
+          <option value="music">Music</option>
+          <option value="science">Science</option>
+          <option value="society_and_culture">
+            Society and Culture
+          </option></select
+        ><br />
+      </section>
+
+      <section>
+        <label for="difficulty-select">Difficulty:</label>
+        <select required id="difficulty-select">
+          <option value="">Select...</option>
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option></select
+        ><br />
+      </section>
+
+      <section>
+        <label for="question-limit-input">Question Limit:</label>
+        <select id="question-limit-input">
+          <option value="">Select...</option>
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="30">30</option>
+          <option value="40">40</option>
+          <option value="50">50</option>
+        </select>
+        <!-- <input required min="1" max="100" placeholder="Type..." type="number" name="difficulty" id="question-limit-input"> -->
+      </section>
+      <div class="config-buttons">
+        <button id="config-back">Go back</button>
+        <button id="config-next">Start</button>
+      </div>
     </div>
 
     <!-- Quiz rules -->
@@ -129,8 +180,8 @@
           score at the end of the quiz.
         </li>
         <li>
-          If you want to retake the quiz, click on the restart button at the end
-          of the quiz.
+          If you want to retake the quiz, click on the 'PLAY AGAIN' button at
+          the end of the quiz.
         </li>
         <li>
           Each question has a time limit of 10 seconds. If you do not answer the
@@ -153,14 +204,13 @@
           incorrect, the app will display a red highlight around the option, and
           also show the correct answer.
         </li>
-        <li>You may click 'START QUIZ' to begin.</li>
+        <li>You may click 'NEXT' to continue.</li>
       </ul>
       <div class="both-rules-btns">
         <button id="rules-go-back">Go back</button>
-        <button id="rules-continue">Start Quiz</button>
+        <button id="rules-continue">Next</button>
       </div>
     </div>
-
     <!-- Quiz display container -->
     <div style="display: none" id="display-container">
       <div class="header">
@@ -180,11 +230,10 @@
       </div>
       <button id="next-button">Next</button>
     </div>
-
     <!-- Score display container -->
     <div class="score-container hide">
       <div id="user-score"></div>
-      <button id="restart">Restart</button>
+      <button id="restart">Play Again</button>
     </div>
 
     <script src="script.js" type="text/javascript"></script>
