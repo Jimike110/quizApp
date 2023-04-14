@@ -67,11 +67,9 @@ document.getElementById("config-next").addEventListener("click", () => {
           quizArray.push(quizObject);
         }
         // Hide the config page and show the quiz page
-        configNext.innerHTML = "...";
         categoryDiv.style.display = "none";
         displayContainer.style.display = "block";
         initial();
-        configNext.setAttribute("disabled");
       });
   }
 });
