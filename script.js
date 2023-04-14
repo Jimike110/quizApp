@@ -20,19 +20,32 @@ let scoreCount = 0;
 let count = 11;
 let countdown;
 let quizArray = [];
+let categoryValue = "all";
+let difficultyValue = "";
+let limitValue = "";
 
-let select = [
-  //Add event listener to the category dropdown
-  document.getElementById("category-select"),
-  document.getElementById("difficulty-select"),
-  document.getElementById("question-limit-input"),
-];
+// Add event listener to the category dropdown
+document.getElementById("category-select").addEventListener("change", (event) => {
+  categoryValue = event.target.value;
+});
 
-select.forEach((element) => {
-  element.addEventListener("change", (event) => {
-    let categoryValue = select[0].value;
-    let difficultyValue = select[1].value;
-    let limitValue = select[2].value;
+// Add event listener to the difficulty dropdown
+document.getElementById("difficulty-select").addEventListener("change", (event) => {
+  difficultyValue = event.target.value;
+});
+
+// Add event listener to the question limit dropdown
+document.getElementById("question-limit-input").addEventListener("change", (event) => {
+  limitValue = event.target.value;
+});
+
+// Add event listener to the config page start button
+document.getElementById("config-next").addEventListener("click", () => {
+  if (categoryValue === "" || difficultyValue === "" || limitValue === "") {
+    // Show an error message if any of the selections is empty
+    alert("Please select a value for all the options.");
+  } else {
+    // Make the API call with the final selections
     let url;
     if (categoryValue === "all") {
       url = `https://the-trivia-api.com/api/questions?&limit=${limitValue}&region=NG&difficulty=${difficultyValue}`;
@@ -42,6 +55,8 @@ select.forEach((element) => {
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
+        // Clear the quiz array before adding new questions
+        quizArray = [];
         for (let i = 0; i < data.length; i++) {
           const quizObject = {
             id: data[i].id,
@@ -51,8 +66,12 @@ select.forEach((element) => {
           };
           quizArray.push(quizObject);
         }
+        // Hide the config page and show the quiz page
+        categoryDiv.style.display = "none";
+        displayContainer.style.display = "block";
+        initial();
       });
-  });
+  }
 });
 
 //Restart Quiz
@@ -214,11 +233,11 @@ configBack.addEventListener("click", () => {
 });
 
 //when user clicks on config page start button
-configNext.addEventListener("click", () => {
-  categoryDiv.style.display = "none";
-  displayContainer.style.display = "block";
-  initial();
-});
+// configNext.addEventListener("click", () => {
+//   categoryDiv.style.display = "none";
+//   displayContainer.style.display = "block";
+//   initial();
+// });
 
 //hide quiz and display start screen
 window.onload = () => {
