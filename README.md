@@ -2,7 +2,7 @@
 This is a beautiful, functional and responsive, web-based trivia quiz application that allows users to test their knowledge on random categories of questions. The app is built using HTML, CSS, and JavaScript, and utilizes The Trivia API to generate random questions.
 
 ## Features
-- Interactive quiz application
+- Allows users to select quiz category, difficulty and question limit.
 - Randomized multiple-choice questions from The Trivia API.
 - Automatic grading of answers at the end of the quiz.
 - 10-second timer per question.
