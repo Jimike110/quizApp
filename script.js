@@ -44,6 +44,8 @@ document.getElementById("config-next").addEventListener("click", () => {
   if (categoryValue === "" || difficultyValue === "" || limitValue === "") {
     // Show an error message if any of the selections is empty
     alert("Please select a value for all the options.");
+  } else if (!navigator.onLine) {
+    alert("An error occurred while fetching questions. Please check your Internet connection and try again.")
   } else {
     // Make the API call with the final selections
     let url;
