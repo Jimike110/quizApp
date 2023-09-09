@@ -368,3 +368,10 @@ input {
   background-color: #de463b;
   color: #ffffff;
 }
+
+.wrapper .email:hover,
+.wrapper .email:hover .tooltip,
+.wrapper .email:hover .tooltip::before {
+  background-color: #c21205;
+  color: #ffffff;
+}
