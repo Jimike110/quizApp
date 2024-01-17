@@ -9,7 +9,7 @@ This is a beautiful, functional and responsive, web-based trivia quiz applicatio
 - Responsive design that works on desktop and mobile devices.
 
 ## Demo
-Check out the live demo of the app at: [https://jimike-quizapp.netlify.app/](https://jimike-quizapp.netlify.app)
+Check out the live demo of the app at: [https://jimike-quiz.netlify.app/](https://jimike-quiz.netlify.app)
 
 ## Technologies Used
 - HTML
@@ -18,7 +18,7 @@ Check out the live demo of the app at: [https://jimike-quizapp.netlify.app/](htt
 - REST API
 
 ## Usage
-1. Navigate to the app URL: [https://jimike-quizapp.netlify.app/](jimike-quizapp.netlify.app)
+1. Navigate to the app URL: [https://jimike-quiz.netlify.app/](jimike-quiz.netlify.app)
 2. Click the "Start Quiz" button to begin the quiz.
 3. Answer the questions within the allotted 10 seconds per question.
 4. Once all questions have been answered, click the "Submit" button to end the quiz and receive your score.
