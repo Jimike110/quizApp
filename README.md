@@ -9,7 +9,7 @@ This is a beautiful, functional and responsive, web-based trivia quiz applicatio
 - Responsive design that works on desktop and mobile devices.
 
 ## Demo
-Check out the live demo of the app at: [https://jimike-quizapp.netlify.app/](https://jimike110.ml/quizApp)
+Check out the live demo of the app at: [https://jimike-quizapp.netlify.app/](https://jimike-quizapp.netlify.app)
 
 ## Technologies Used
 - HTML
@@ -18,7 +18,7 @@ Check out the live demo of the app at: [https://jimike-quizapp.netlify.app/](htt
 - REST API
 
 ## Usage
-1. Navigate to the app URL: [https://jimike-quizapp.netlify.app/](https://jimike110.ml/quizApp)
+1. Navigate to the app URL: [https://jimike-quizapp.netlify.app/](jimike-quizapp.netlify.app)
 2. Click the "Start Quiz" button to begin the quiz.
 3. Answer the questions within the allotted 10 seconds per question.
 4. Once all questions have been answered, click the "Submit" button to end the quiz and receive your score.
@@ -35,7 +35,7 @@ This Quiz App uses The Trivia API to generate questions. The API can be accessed
 
 ## Contact
 - Twitter: [@jimikeCodes](https://twitter.com/jimikeCodes)
-- LinkedIn: [Michael Oladoye](https://www.linkedin.com/in/michael-oladoye-91ba88225)
+- LinkedIn: [Michael Oladoye](https://www.linkedin.com/in/jimike)
 - Facebook: [Michael Oladoye](https://facebook.com/michael.oladoye.129)
 - Email: [email me here](mailto:oladoyemike@gmail.com)
 
