@@ -8,8 +8,8 @@ This is a beautiful, functional and responsive, web-based trivia quiz applicatio
 - 10-second timer per question.
 - Responsive design that works on desktop and mobile devices.
 
-## Demo
-Check out the live demo of the app at: [https://jimike-quiz.netlify.app/](https://jimike-quiz.netlify.app)
+## Live View
+Check out the live view of the app at: [https://jimike-quiz.netlify.app/](https://jimike-quiz.netlify.app)
 
 ## Technologies Used
 - HTML
